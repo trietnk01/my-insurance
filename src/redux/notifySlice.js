@@ -7,10 +7,10 @@ export default createSlice({
     msg: [],
   },
   reducers: {
-    showNotify: (state, action) => {
+    showNotify: (state, { payload }) => {
       state.isShow = true;
-      state.type = action.payload.type;
-      state.msg = action.payload.msg;
+      state.type = payload.type;
+      state.msg = payload.msg;
     },
     hideNotify: (state) => {
       state.isShow = false;
